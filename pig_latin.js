@@ -41,8 +41,12 @@ function pigLatin(sentence) {
   let result = [];
   for(let i = 0; i < arrayString.length; i++)
   {
-    var matchVowel = /[AIUEOaiueo]/.exec(arrayString[i]);
-    if(matchVowel.index === 0)
+    var matchVowel = /[AIUEO]/i.exec(arrayString[i]);
+    if(matchVowel == null)
+    {
+      result.push(arrayString[i]);
+    }
+    else if(matchVowel.index === 0)
     {
       result.push(arrayString[i]);
     }
