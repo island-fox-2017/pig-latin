@@ -22,7 +22,7 @@ function pigLatin(sentence) {
     if (perkata[i].charAt(0).match(/[aiueo]/gi)) {
       newSentence.push(perkata[i]);
     } else {
-      newSentence.push(perkata[i].replace(/(^[^aiueo]*)(.*)/i, '$2$1ay'))
+      newSentence.push(perkata[i].replace(/([^aiueo]*)(.*)/i, '$2$1ay'))
     }
   }
   return newSentence.join().replace(/,/g, ' ');
