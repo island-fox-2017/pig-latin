@@ -23,8 +23,8 @@ function pigLatin(sentence) {
   // Your pig latin implementation here...
   
   let regVow = /\b[aiueo]/ //define vowels sentence 
-  // let regCons = /\b[^aiueo\s]/g // \b untuk mengecek per kata
-  let regCons = /^[bcdfghjklmnpqrstvwxyz]+/i
+  let regCons = /\b[^aiueo\s]+/g // \b untuk mengecek per kata
+  // let regCons = /^[bcdfghjklmnpqrstvwxyz]+/i
   let result = [];
   
   let word = sentence.split(' ')
