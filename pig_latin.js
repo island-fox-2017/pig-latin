@@ -28,10 +28,11 @@ function pigLatin(sentence) {
   let splitSentence = sentence.split(' ');
   let result = [];
   for (var i = 0; i < splitSentence.length; i++) {
-    if(splitSentence[i].match(vokal)) {
+
+    if(vokal.test(splitSentence[i])) {
       result.push(splitSentence[i]);
     }
-    else if (splitSentence[i].match(konsonan)){
+    else if (konsonan.test(splitSentence[i])){
       result.push(splitSentence[i].replace(konsonan, '$2$1ay'));
     }
   }
